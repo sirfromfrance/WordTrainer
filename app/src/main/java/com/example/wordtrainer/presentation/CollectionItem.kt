@@ -1,0 +1,85 @@
+package com.example.wordtrainer.presentation
+
+import android.R
+import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.CornerRadius
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.graphics.drawscope.clipPath
+import androidx.compose.ui.layout.ModifierInfo
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
+import com.example.wordtrainer.WordCollection
+import com.example.wordtrainer.domain.util.CollectionOrder
+import kotlin.io.path.Path
+
+
+@Composable
+fun CollectionItem(
+    wordCollection: WordCollection,
+    modifier: Modifier = Modifier,
+    cornerRadius: Dp = 10.dp,
+    onDeleteClick: () -> Unit
+) {
+    Box(
+        modifier = Modifier
+    ){
+        Canvas(modifier = Modifier.matchParentSize()){
+            val clipPath = Path().apply {
+                lineTo(0f, 0f)
+                lineTo(size.width, 0f)
+                lineTo(size.width,size.height )
+                lineTo(0f, size.height)
+                close()
+            }
+            clipPath(clipPath){
+                drawRoundRect(
+                    color = Color(wordCollection.color),
+                    size = size,
+                    cornerRadius = CornerRadius(cornerRadius.toPx())
+                )
+            }
+        }
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(16.dp)
+                .padding(end = 32.dp)
+        ){
+
+            Text(
+                text = wordCollection.name,
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurface,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis
+            )
+        }
+        IconButton(
+            onClick = onDeleteClick,
+            modifier = Modifier.align(Alignment.BottomEnd)
+        ) {
+            Icon(
+                imageVector = Icons.Default.Delete,
+                contentDescription = "Delete collection"
+            )
+
+        }
+    }
+}

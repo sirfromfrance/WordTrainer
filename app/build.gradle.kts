@@ -59,8 +59,10 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+
     val nav_version = "2.9.7"
     val room_version = "2.8.4"
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
     implementation("androidx.navigation:navigation-compose:$nav_version")
     implementation("androidx.room:room-ktx:${room_version}")
     ksp("androidx.room:room-compiler:$room_version")
