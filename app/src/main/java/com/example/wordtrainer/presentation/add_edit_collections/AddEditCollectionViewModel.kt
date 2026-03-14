@@ -20,7 +20,7 @@ class AddEditCollectionViewModel @Inject constructor(
 ): ViewModel() {
 
     private val _collectionTitle = mutableStateOf(CollectionTextFieldState(
-        hint = "Enter title"
+        hint = "Enter title..."
     ))
     val collectionTitle: State<CollectionTextFieldState> = _collectionTitle
 
@@ -34,6 +34,9 @@ class AddEditCollectionViewModel @Inject constructor(
 
     private val _eventFlow = MutableSharedFlow<UiEvent>()
     val eventFlow = _eventFlow.asSharedFlow()
+
+
+    fun onEvent(event:){}
 
     sealed class UiEvent{
         data class ShowSnackbar(val message:String): UiEvent()
