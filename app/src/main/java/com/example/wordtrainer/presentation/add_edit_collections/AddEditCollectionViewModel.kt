@@ -36,7 +36,7 @@ class AddEditCollectionViewModel @Inject constructor(
     val eventFlow = _eventFlow.asSharedFlow()
 
 
-    fun onEvent(event:){}
+    //fun onEvent(event:){}
 
     sealed class UiEvent{
         data class ShowSnackbar(val message:String): UiEvent()
