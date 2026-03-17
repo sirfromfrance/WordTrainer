@@ -6,8 +6,9 @@ import com.example.wordtrainer.data.repository.CollectionRepositoryImpl
 import com.example.wordtrainer.domain.repository.CollectionRepository
 import com.example.wordtrainer.domain.repository.use_case.CollectionUseCases
 import com.example.wordtrainer.domain.repository.use_case.DeleteCollectionUseCase
-import com.example.wordtrainer.domain.repository.use_case.GetCollectionUseCase
+import com.example.wordtrainer.domain.repository.use_case.GetCollectionsUseCase
 import com.example.wordtrainer.domain.repository.use_case.AddCollection
+import com.example.wordtrainer.domain.repository.use_case.GetCollection
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -37,9 +38,10 @@ object AppModule {
     @Singleton
     fun provideCollectionUseCases(repository: CollectionRepository): CollectionUseCases{
         return CollectionUseCases(
-            getCollection = GetCollectionUseCase(repository),
+            getCollections = GetCollectionsUseCase(repository),
             deleteCollection = DeleteCollectionUseCase(repository),
-            addCollection = AddCollection(repository)
+            addCollection = AddCollection(repository),
+            getCollection = GetCollection(repository)
         )
     }
 }

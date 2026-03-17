@@ -12,7 +12,7 @@ import com.example.wordtrainer.ui.theme.PurpleGrey40
 data class WordCollection(
     @PrimaryKey val id: Int? = null,
     val name: String,
-    val language: String,
+   // val language: String,
     val color: Int,
     val createdAt: Long
 ){

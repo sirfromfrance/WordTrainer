@@ -7,7 +7,7 @@ import com.example.wordtrainer.domain.util.OrderType
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
-class GetCollectionUseCase (
+class GetCollectionsUseCase (
     private val repository: CollectionRepository
 ){
     operator fun invoke(collectionOrder: CollectionOrder = CollectionOrder.Date(OrderType.Descending)

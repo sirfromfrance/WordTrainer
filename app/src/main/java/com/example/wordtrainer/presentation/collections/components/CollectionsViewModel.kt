@@ -68,7 +68,7 @@ class CollectionsViewModel @Inject constructor(
 
     private fun getCollections(collectionOrder: CollectionOrder){
         getCollectionJob?.cancel()
-       getCollectionJob =  CollectionUseCases.getCollection(collectionOrder).onEach { collections ->
+       getCollectionJob =  CollectionUseCases.getCollections(collectionOrder).onEach { collections ->
             _state.value = state.value.copy(collections = collections,
                 collectionsOrder = collectionOrder
             )
