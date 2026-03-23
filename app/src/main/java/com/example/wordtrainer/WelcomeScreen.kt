@@ -36,8 +36,6 @@ import androidx.navigation.NavController
 @Composable
 fun WelcomeScreen(navController: NavController) {
 
-
-
     val logoBox = Modifier
         .background(Color.Green)
         .padding(4.dp)
