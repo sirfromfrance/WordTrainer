@@ -30,7 +30,9 @@ fun TransparentHintTextField(
             onValueChange = onValueChange,
             singleLine = singleLine,
             textStyle = textStyle,
-            modifier = Modifier.fillMaxWidth().onFocusChanged{
+            modifier = Modifier
+                .fillMaxWidth()
+                .onFocusChanged{
                 onFocusChange(it)
             }
         )

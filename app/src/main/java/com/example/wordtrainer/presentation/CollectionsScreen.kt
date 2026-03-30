@@ -38,6 +38,7 @@ import com.example.wordtrainer.presentation.collections.components.CollectionsEv
 import com.example.wordtrainer.presentation.collections.components.OrderSection
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.SnackbarResult
+import com.example.wordtrainer.presentation.util.Screen
 import kotlinx.coroutines.launch
 
 
@@ -56,7 +57,9 @@ fun CollectionsScreen(
         },
         floatingActionButton = {
             FloatingActionButton(
-                onClick = {},
+                onClick = {
+                    navCollection.navigate(Screen.AddEditCollectionScreen.route)
+                },
                 containerColor = MaterialTheme.colorScheme.primary
             ) {
                 Icon(imageVector = Icons.Default.Add, contentDescription = "Add collection")
@@ -116,6 +119,10 @@ fun CollectionsScreen(
                         modifier = Modifier
                             .fillMaxWidth()
                             .clickable{
+                                navCollection.navigate(
+                                    Screen.AddEditCollectionScreen.route +
+                                            "?collectionId=${wordCollection.id}&collectionColor=${wordCollection.color}"
+                                )
 
                             },
                         onDeleteClick = {

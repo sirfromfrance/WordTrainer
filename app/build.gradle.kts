@@ -53,6 +53,8 @@ dependencies {
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.room.common.jvm)
     implementation(libs.androidx.room3.runtime)
+    implementation(libs.androidx.compose.animation.core)
+    implementation(libs.ads.mobile.sdk)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

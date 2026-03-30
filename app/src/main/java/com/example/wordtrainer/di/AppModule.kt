@@ -1,4 +1,6 @@
 package com.example.wordtrainer.di
+import android.app.Application
+import android.content.Context
 import androidx.room.Room
 import com.example.wordtrainer.WordTrainerApp
 import com.example.wordtrainer.data.data_source.CollectionDB
@@ -12,6 +14,7 @@ import com.example.wordtrainer.domain.repository.use_case.GetCollection
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
@@ -21,7 +24,7 @@ import javax.inject.Singleton
 object AppModule {
     @Provides
     @Singleton
-    fun provideCollectionsDB(app: WordTrainerApp): CollectionDB{
+    fun provideCollectionsDB(app: Application): CollectionDB{
         return Room.databaseBuilder(
                 app,
             CollectionDB::class.java,
