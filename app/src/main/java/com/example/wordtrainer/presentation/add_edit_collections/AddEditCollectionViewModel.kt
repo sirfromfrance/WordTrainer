@@ -45,7 +45,7 @@ import kotlinx.coroutines.launch
     private var currentCollectionId: Int? = null
 
     init{
-        savedStateHandle.get<Int>("collectionid")?.let {collectionId ->
+        savedStateHandle.get<Int>("collectionId")?.let {collectionId ->
             if(collectionId != -1){
                 viewModelScope.launch{
                     collectionUseCases.getCollection(collectionId)?.also{

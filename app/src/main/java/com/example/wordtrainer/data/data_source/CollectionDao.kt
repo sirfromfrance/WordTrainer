@@ -10,7 +10,6 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface CollectionDao {
-
     @Query("SELECT * FROM wordcollection")
     fun getCollections(): Flow<List<WordCollection>>
 

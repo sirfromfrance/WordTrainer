@@ -119,6 +119,7 @@ fun CollectionsScreen(
                         modifier = Modifier
                             .fillMaxWidth()
                             .clickable{
+                                println("CLICKED: ${wordCollection.name}")
                                 navCollection.navigate(
                                     Screen.AddEditCollectionScreen.route +
                                             "?collectionId=${wordCollection.id}&collectionColor=${wordCollection.color}"

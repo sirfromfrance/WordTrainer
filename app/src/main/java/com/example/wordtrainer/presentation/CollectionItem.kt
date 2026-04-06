@@ -38,7 +38,7 @@ fun CollectionItem(
     onDeleteClick: () -> Unit
 ) {
     Box(
-        modifier = Modifier
+        modifier = modifier
     ){
         Canvas(modifier = Modifier.matchParentSize()){
             val clipPath = Path().apply {
