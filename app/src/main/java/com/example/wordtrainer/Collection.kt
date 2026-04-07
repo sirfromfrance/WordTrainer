@@ -10,9 +10,9 @@ import com.example.wordtrainer.ui.theme.PurpleGrey40
 
 @Entity
 data class WordCollection(
-    @PrimaryKey val id: Int? = null,
+    @PrimaryKey(autoGenerate = true) val id: Int? = null,
     val name: String,
-   // val language: String,
+   //val language: String,
     val color: Int,
     val createdAt: Long
 ){
@@ -20,5 +20,7 @@ data class WordCollection(
         val collectionColors = listOf(Purple40, Pink80,Blue200, Green300, PurpleGrey40)
     }
 }
+
+
 
 class InvalidCollectionException(message: String): Exception(message)

@@ -7,7 +7,7 @@ import com.example.wordtrainer.WordCollection
 
 @Database(
     entities = [WordCollection::class],
-    version = 1
+    version = 2
 )
 
 abstract class CollectionDB:RoomDatabase() {
