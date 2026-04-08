@@ -1,6 +1,6 @@
 package com.example.wordtrainer.presentation.collections.components
 
-import com.example.wordtrainer.WordCollection
+import com.example.wordtrainer.data.data_source.WordCollection
 import com.example.wordtrainer.domain.util.CollectionOrder
 
 sealed class CollectionsEvent {

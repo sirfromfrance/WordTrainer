@@ -1,7 +1,7 @@
 package com.example.wordtrainer.domain.repository.use_case
 
-import com.example.wordtrainer.InvalidCollectionException
-import com.example.wordtrainer.WordCollection
+import com.example.wordtrainer.data.data_source.InvalidCollectionException
+import com.example.wordtrainer.data.data_source.WordCollection
 import com.example.wordtrainer.domain.repository.CollectionRepository
 import kotlin.jvm.Throws
 

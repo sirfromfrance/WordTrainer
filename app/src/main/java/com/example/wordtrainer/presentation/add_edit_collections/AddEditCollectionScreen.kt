@@ -1,8 +1,6 @@
 package com.example.wordtrainer.presentation.add_edit_collections
 
-import ads_mobile_sdk.h5
 import androidx.compose.animation.Animatable
-import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -38,8 +36,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.toArgb
-import androidx.navigation.compose.rememberNavController
-import com.example.wordtrainer.WordCollection
+import com.example.wordtrainer.data.data_source.WordCollection
 import com.example.wordtrainer.presentation.add_edit_collections.components.TransparentHintTextField
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch

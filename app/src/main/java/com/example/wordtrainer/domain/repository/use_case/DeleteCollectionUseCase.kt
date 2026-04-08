@@ -1,6 +1,6 @@
 package com.example.wordtrainer.domain.repository.use_case
 
-import com.example.wordtrainer.WordCollection
+import com.example.wordtrainer.data.data_source.WordCollection
 import com.example.wordtrainer.domain.repository.CollectionRepository
 
 class DeleteCollectionUseCase(

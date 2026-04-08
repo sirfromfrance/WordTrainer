@@ -1,6 +1,6 @@
 package com.example.wordtrainer.domain.repository
 
-import com.example.wordtrainer.WordCollection
+import com.example.wordtrainer.data.data_source.WordCollection
 import kotlinx.coroutines.flow.Flow
 
 interface CollectionRepository {

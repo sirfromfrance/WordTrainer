@@ -1,4 +1,4 @@
-package com.example.wordtrainer
+package com.example.wordtrainer.data.data_source
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -9,6 +9,9 @@ import com.example.wordtrainer.ui.theme.Green300
 import com.example.wordtrainer.ui.theme.PurpleGrey40
 
 @Entity
+
+
+
 data class WordCollection(
     @PrimaryKey(autoGenerate = true) val id: Int? = null,
     val name: String,

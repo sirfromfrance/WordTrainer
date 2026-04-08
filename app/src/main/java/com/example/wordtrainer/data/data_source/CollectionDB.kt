@@ -1,13 +1,16 @@
 package com.example.wordtrainer.data.data_source
 
+import androidx.room.AutoMigration
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.example.wordtrainer.WordCollection
 
 
 @Database(
     entities = [WordCollection::class],
-    version = 2
+    version = 2,
+    autoMigrations = [
+        AutoMigration(from = 1, to = 2)
+    ]
 )
 
 abstract class CollectionDB:RoomDatabase() {

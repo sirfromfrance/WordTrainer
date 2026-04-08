@@ -3,7 +3,7 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.wordtrainer.WordCollection
+import com.example.wordtrainer.data.data_source.WordCollection
 import com.example.wordtrainer.domain.model.CollectionsState
 import com.example.wordtrainer.domain.repository.use_case.CollectionUseCases
 import com.example.wordtrainer.domain.util.CollectionOrder

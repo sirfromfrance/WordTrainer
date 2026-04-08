@@ -3,20 +3,15 @@ package com.example.wordtrainer.presentation.add_edit_collections
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import com.example.wordtrainer.domain.repository.use_case.CollectionUseCases
-import dagger.hilt.android.internal.lifecycle.HiltViewModelMap
 import jakarta.inject.Inject
 import dagger.hilt.android.lifecycle.HiltViewModel
 import androidx.compose.runtime.State
 import androidx.compose.ui.graphics.toArgb
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
-import androidx.room.util.copy
-import androidx.room3.util.copy
-import com.example.wordtrainer.InvalidCollectionException
-import com.example.wordtrainer.WordCollection
+import com.example.wordtrainer.data.data_source.InvalidCollectionException
+import com.example.wordtrainer.data.data_source.WordCollection
 import kotlinx.coroutines.flow.MutableSharedFlow
-import com.example.wordtrainer.presentation.add_edit_collections.CollectionTextFieldState
-import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 
