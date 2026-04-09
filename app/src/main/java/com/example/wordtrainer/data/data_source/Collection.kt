@@ -10,8 +10,6 @@ import com.example.wordtrainer.ui.theme.PurpleGrey40
 
 @Entity
 
-
-
 data class WordCollection(
     @PrimaryKey(autoGenerate = true) val id: Int? = null,
     val name: String,

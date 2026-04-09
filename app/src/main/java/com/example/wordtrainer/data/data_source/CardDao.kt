@@ -4,5 +4,7 @@ import androidx.room.Dao
 import androidx.room.Query
 
 
-//@Dao
+@Dao
+interface CardDao{
 
+}
