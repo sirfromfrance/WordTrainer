@@ -5,6 +5,8 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Update
+import com.google.crypto.tink.shaded.protobuf.Timestamp
 import kotlinx.coroutines.flow.Flow
 
 @Dao
@@ -17,6 +19,8 @@ interface CollectionDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertCollection(collection: WordCollection)
+
+
 
     @Delete
     suspend fun deleteCollection(collection: WordCollection)

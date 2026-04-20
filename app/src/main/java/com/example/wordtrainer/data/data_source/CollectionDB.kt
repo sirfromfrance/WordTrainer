@@ -8,9 +8,9 @@ import androidx.room.RoomDatabase
 @Database(
     entities = [WordCollection::class],
     version = 2,
-    autoMigrations = [
-        AutoMigration(from = 1, to = 2)
-    ]
+//    autoMigrations = [
+//        AutoMigration(from = 1, to = 2)
+//    ]
 )
 
 abstract class CollectionDB:RoomDatabase() {

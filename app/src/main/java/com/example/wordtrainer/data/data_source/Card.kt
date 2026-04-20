@@ -21,5 +21,7 @@ data class Card(
     val word: String,
     val description: String,
     val imageURL: String?,
+    val createdAt: Long,
+    val lastModified: Long
 
 )

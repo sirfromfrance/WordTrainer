@@ -10,8 +10,8 @@ interface CardRepository {
     suspend fun getCard(id: Int): Card?
 
     suspend fun insertCard(card: Card)
-    
-    suspend fun updateCard(card: Card)
+
+    suspend fun updateCard(id: Int, word: String, description: String, lastModified:Long)
 
     suspend fun deleteCard(card: Card)
 }
