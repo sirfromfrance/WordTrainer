@@ -1,20 +1,17 @@
 package com.example.wordtrainer.di
 import android.app.Application
-import android.content.Context
 import androidx.room.Room
-import com.example.wordtrainer.WordTrainerApp
 import com.example.wordtrainer.data.data_source.CollectionDB
 import com.example.wordtrainer.data.repository.CollectionRepositoryImpl
 import com.example.wordtrainer.domain.repository.CollectionRepository
-import com.example.wordtrainer.domain.repository.use_case.CollectionUseCases
-import com.example.wordtrainer.domain.repository.use_case.DeleteCollectionUseCase
-import com.example.wordtrainer.domain.repository.use_case.GetCollectionsUseCase
-import com.example.wordtrainer.domain.repository.use_case.AddCollection
-import com.example.wordtrainer.domain.repository.use_case.GetCollection
+import com.example.wordtrainer.domain.repository.use_case.collection.CollectionUseCases
+import com.example.wordtrainer.domain.repository.use_case.collection.DeleteCollectionUseCase
+import com.example.wordtrainer.domain.repository.use_case.collection.GetCollectionsUseCase
+import com.example.wordtrainer.domain.repository.use_case.collection.AddCollection
+import com.example.wordtrainer.domain.repository.use_case.collection.GetCollection
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 

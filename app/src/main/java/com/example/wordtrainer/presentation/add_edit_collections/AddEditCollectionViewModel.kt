@@ -2,7 +2,7 @@ package com.example.wordtrainer.presentation.add_edit_collections
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
-import com.example.wordtrainer.domain.repository.use_case.CollectionUseCases
+import com.example.wordtrainer.domain.repository.use_case.collection.CollectionUseCases
 import jakarta.inject.Inject
 import dagger.hilt.android.lifecycle.HiltViewModel
 import androidx.compose.runtime.State
